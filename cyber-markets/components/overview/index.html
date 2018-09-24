@@ -250,7 +250,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../" title="Cyber markets" class="md-tabs__link md-tabs__link--active">
+        <a href="../../cyber-markets/" title="Cyber markets" class="md-tabs__link md-tabs__link--active">
           Cyber markets
         </a>
       
@@ -497,19 +497,7 @@
 
 
   <li class="md-nav__item">
-    <a href="cyber-markets/" title="Index" class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="cyber-markets/about-markets/" title="About Markets" class="md-nav__link">
+    <a href="cyber-markets/cyber-markets/" title="About Markets" class="md-nav__link">
       About Markets
     </a>
   </li>
@@ -522,9 +510,9 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
     
-    <label class="md-nav__link" for="nav-5-3">
+    <label class="md-nav__link" for="nav-5-2">
       Api
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
@@ -537,8 +525,8 @@
 
 
   <li class="md-nav__item">
-    <a href="cyber-markets/api/" title="Index" class="md-nav__link">
-      Index
+    <a href="cyber-markets/api/Readme/" title="Readme" class="md-nav__link">
+      Readme
     </a>
   </li>
 
@@ -557,9 +545,9 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" checked>
     
-    <label class="md-nav__link" for="nav-5-4">
+    <label class="md-nav__link" for="nav-5-3">
       Components
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
@@ -627,8 +615,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tickers" title="Tickers" class="md-nav__link">
-    Tickers
+  <a href="#tickers-real-time" title="Tickers real-time" class="md-nav__link">
+    Tickers real-time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tickers-historical" title="Tickers historical" class="md-nav__link">
+    Tickers historical
   </a>
   
 </li>
@@ -656,9 +651,9 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
     
-    <label class="md-nav__link" for="nav-5-5">
+    <label class="md-nav__link" for="nav-5-4">
       Contributing
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
@@ -683,8 +678,8 @@
 
 
   <li class="md-nav__item">
-    <a href="cyber-markets/contributing/contributing/" title="Contributing to Cyber Markets [![GitHub contributors](https://img.shields.io/github/contributors/cybercongress/cyber-markets.svg?style=flat-square&longCache=true)](https://github.com/cybercongress/cyber-markets)" class="md-nav__link">
-      Contributing to Cyber Markets [![GitHub contributors](https://img.shields.io/github/contributors/cybercongress/cyber-markets.svg?style=flat-square&longCache=true)](https://github.com/cybercongress/cyber-markets)
+    <a href="cyber-markets/contributing/contributing/" title="Contributing to Cyber Markets" class="md-nav__link">
+      Contributing to Cyber Markets
     </a>
   </li>
 
@@ -1330,8 +1325,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tickers" title="Tickers" class="md-nav__link">
-    Tickers
+  <a href="#tickers-real-time" title="Tickers real-time" class="md-nav__link">
+    Tickers real-time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tickers-historical" title="Tickers historical" class="md-nav__link">
+    Tickers historical
   </a>
   
 </li>
@@ -1361,6 +1363,7 @@
 <tr>
 <th>Component</th>
 <th>Scale</th>
+<th>Status</th>
 <th>Description</th>
 <th>Cluster Address</th>
 <th>Metrics</th>
@@ -1371,6 +1374,7 @@
 <tr>
 <td>Kafka</td>
 <td>1</td>
+<td></td>
 <td>Data Entry</td>
 <td></td>
 <td></td>
@@ -1379,6 +1383,7 @@
 <tr>
 <td>Kafka Manager</td>
 <td>1</td>
+<td></td>
 <td>Kafka Explorer</td>
 <td></td>
 <td></td>
@@ -1387,6 +1392,7 @@
 <tr>
 <td>Elassandra</td>
 <td>1 - N</td>
+<td></td>
 <td>Data Back</td>
 <td></td>
 <td></td>
@@ -1395,15 +1401,26 @@
 <tr>
 <td>Exchanges Connector</td>
 <td>1 - N</td>
+<td></td>
 <td>Connect to CEXs/DEXs for raw data</td>
 <td></td>
 <td>8080:/actuator/metrics</td>
 <td></td>
 </tr>
 <tr>
-<td>Tickers</td>
+<td>Tickers real-time</td>
 <td>1 - N</td>
-<td>Calculate Tickers From Raw Data</td>
+<td></td>
+<td>Calculate Tickers From Raw real-time data</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tickers historical</td>
+<td>1</td>
+<td></td>
+<td>Calculate Tickers From Raw historical data</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1411,7 +1428,8 @@
 <tr>
 <td>Storer</td>
 <td>1</td>
-<td>Write data to database</td>
+<td></td>
+<td>Write raw data to database</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1419,6 +1437,7 @@
 <tr>
 <td>Markets REST API</td>
 <td>1 - N</td>
+<td></td>
 <td>Rest Api To Markets Entities</td>
 <td></td>
 <td></td>
@@ -1427,6 +1446,7 @@
 <tr>
 <td>Markets Stream API</td>
 <td>1 - N</td>
+<td>not implemented</td>
 <td>Web Socket Api To Markets Entities</td>
 <td></td>
 <td></td>
@@ -1435,6 +1455,7 @@
 <tr>
 <td>Markets Api Docs</td>
 <td>1 - N</td>
+<td></td>
 <td>Markets Api Docs Based On Swagger</td>
 <td></td>
 <td></td>
@@ -1453,8 +1474,12 @@
 <p>Collect raw data from centralized and decentralized exchanges such as trades, order books and put it to kafka.</p>
 <h2 id="storer">Storer<a class="headerlink" href="#storer" title="Permanent link">&para;</a></h2>
 <p>Writes data from kafka topics or directly from exchanges-connector to cassandra cluster</p>
-<h2 id="tickers">Tickers<a class="headerlink" href="#tickers" title="Permanent link">&para;</a></h2>
-<p>Calculate tickers, prices, etc and aggregate raw data which collecting exchanges connectors module</p>
+<h2 id="tickers-real-time">Tickers real-time<a class="headerlink" href="#tickers-real-time" title="Permanent link">&para;</a></h2>
+<p>Calculate tickers from trades which collecting exchanges connectors module. By default, the recalculation occurs every 3 seconds.
+Trades that do not hit the gap in 3 seconds are skipped.</p>
+<h2 id="tickers-historical">Tickers historical<a class="headerlink" href="#tickers-historical" title="Permanent link">&para;</a></h2>
+<p>Calculate tickers, prices, etc and aggregate raw data which collecting exchanges connectors module. 
+Tickers are calculated from data which stored in the Elassandra.</p>
                 
                   
                 
@@ -1475,7 +1500,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="cyber-markets/api/" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="cyber-markets/api/Readme/" title="Readme" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1484,7 +1509,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Index
+                Readme
               </span>
             </div>
           </a>
