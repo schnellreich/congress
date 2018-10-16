@@ -795,20 +795,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bitcoind" title="Bitcoind" class="md-nav__link">
-    Bitcoind
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bitcoinabc" title="BitcoinABC" class="md-nav__link">
-    BitcoinABC
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#parity" title="Parity" class="md-nav__link">
     Parity
   </a>
@@ -1353,20 +1339,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bitcoind" title="Bitcoind" class="md-nav__link">
-    Bitcoind
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bitcoinabc" title="BitcoinABC" class="md-nav__link">
-    BitcoinABC
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#parity" title="Parity" class="md-nav__link">
     Parity
   </a>
@@ -1413,105 +1385,59 @@
 <th>App</th>
 <th>data path</th>
 <th>port</th>
-<th>creds</th>
 <th>current size</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>bitcoind - btc</td>
-<td>/cyberdata/ssd05tb/bitcoind</td>
-<td>8332</td>
-<td>cyber:cyber</td>
-<td>184 gb</td>
-</tr>
-<tr>
-<td>abc    -   bth</td>
-<td>/cyberdata/abc</td>
-<td>18332</td>
-<td>bitcoin:password</td>
-<td>156 gb</td>
-</tr>
-<tr>
 <td>parity -   eth</td>
-<td>/cyberdata/ssd05tb/eth</td>
-<td>8545</td>
-<td></td>
-<td>56  gb</td>
+<td>/cyberdata/parity</td>
+<td>34545</td>
+<td>174 gb</td>
 </tr>
 <tr>
 <td>parity -   eth_c</td>
-<td>/cyberdata/ssd05tb/eth_c</td>
-<td>18545</td>
-<td></td>
-<td>5.3 gb</td>
+<td>/cyberdata/parity-kovan</td>
+<td>34645</td>
+<td>30 gb</td>
 </tr>
 </tbody>
 </table>
 <h2 id="local-forwarding-port-for-chains">Local forwarding port for chains<a class="headerlink" href="#local-forwarding-port-for-chains" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>ssh -L 18332:localhost:18332 -L 8332:localhost:8332 \
--L 18545:localhost:18545 -L 8545:localhost:8545 \
-mars@staging.cyber.fund  -p 33322
+<div class="codehilite"><pre><span></span>ssh -L 8545:localhost:34545 -L 8546:localhost:34546 earth@earth.cybernode.ai -p 33324
 </pre></div>
 
 
 <h2 id="commands-used-to-run-chain-and-live-probe">Commands used to run chain and live probe<a class="headerlink" href="#commands-used-to-run-chain-and-live-probe" title="Permanent link">&para;</a></h2>
-<h3 id="bitcoind">Bitcoind<a class="headerlink" href="#bitcoind" title="Permanent link">&para;</a></h3>
-<p>Run:</p>
-<div class="codehilite"><pre><span></span>sudo  docker run -d -p 8332:8332 --name bitcoind  --restart always \
--v /cyberdata/ssd05tb/bitcoind:/home/bitcoin/.bitcoin ruimarinho/bitcoin-core:0.15.1 \
--server -rest -txindex -rpcpassword=cyber -rpcuser=cyber -rpcallowip=0.0.0.0/0
-</pre></div>
-
-
-<p>Probe:</p>
-<div class="codehilite"><pre><span></span>curl -X POST -H &quot;Content-Type: application/json&quot; \
---data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;getblockhash&quot;,&quot;params&quot;:[1],&quot;id&quot;:1}&#39; \
-http://127.0.0.1:8332 -u cyber:cyber
-</pre></div>
-
-
-<h3 id="bitcoinabc">BitcoinABC<a class="headerlink" href="#bitcoinabc" title="Permanent link">&para;</a></h3>
-<p>Run:</p>
-<div class="codehilite"><pre><span></span>sudo  docker run -d -p 18332:8332 --name abc  --restart always 
--v /cyberdata/abc:/data zquestz/bitcoin-abc:0.16.1 bitcoind -server -rest
-</pre></div>
-
-
-<p>Probe:</p>
-<div class="codehilite"><pre><span></span>curl -X POST -H &quot;Content-Type: application/json&quot; \
---data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;getblockhash&quot;,&quot;params&quot;:[1],&quot;id&quot;:1}&#39; \
-http://127.0.0.1:18332 -u cyber:cyber
-</pre></div>
-
-
 <h3 id="parity">Parity<a class="headerlink" href="#parity" title="Permanent link">&para;</a></h3>
 <p>Run:</p>
-<div class="codehilite"><pre><span></span>sudo  docker run -d -p 8545:8545 --name parity_eth  --restart always \
--v /cyberdata/ssd05tb/eth:/cyberdata parity/parity:stable \
---db-path /cyberdata --jsonrpc-hosts all --jsonrpc-interface all --jsonrpc-threads 10
+<div class="codehilite"><pre><span></span>docker run -d  -p 34546:8546 -p 34545:8545 -v /cyberdata/parity:/cyberdata \
+-v  /home/earth/.local/share/io.parity.ethereum/jsonrpc.ipc:/home/parity/.local/share/io.parity.ethereum/jsonrpc.ipc \
+--name parity --restart always --ipc=host parity/parity:stable \
+--db-compaction ssd --unsafe-expose --db-path /cyberdata --tracing=on --fat-db=on
 </pre></div>
 
 
 <p>Probe:</p>
 <div class="codehilite"><pre><span></span>curl -X POST -H &quot;Content-Type: application/json&quot; \
 --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getBlockByNumber&quot;,&quot;params&quot;:[&quot;0x1&quot;, true],&quot;id&quot;:1}&#39;\
- http://127.0.0.1:8545
+ http://127.0.0.1:34545
 </pre></div>
 
 
 <h3 id="parity-chain-classic">Parity --chain classic<a class="headerlink" href="#parity-chain-classic" title="Permanent link">&para;</a></h3>
 <p>Run:</p>
-<div class="codehilite"><pre><span></span>sudo  docker run -d -p 18545:8545 --name parity_etc  --restart always \
--v /cyberdata/ssd05tb/eth_c:/cyberdata parity/parity:stable --db-path /cyberdata \
---jsonrpc-hosts all --jsonrpc-interface all --chain classic --jsonrpc-threads 10
+<div class="codehilite"><pre><span></span>docker run -d  -p 34646:8546 -p 34645:8545 -v /cyberdata/parity:/cyberdata \
+-v  /home/earth/.local/share/io.parity.ethereum/jsonrpc.ipc:/home/parity/.local/share/io.parity.ethereum/jsonrpc.ipc \
+--name parity-kovan --restart always --ipc=host parity/parity:stable \
+--db-compaction ssd --unsafe-expose --db-path /cyberdata --tracing=on --fat-db=on --chain kovan
 </pre></div>
 
 
 <p>Probe:</p>
 <div class="codehilite"><pre><span></span>curl -X POST -H &quot;Content-Type: application/json&quot; \
 --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getBlockByNumber&quot;,&quot;params&quot;:[&quot;0x1&quot;, true],&quot;id&quot;:1}&#39; \
-http://127.0.0.1:18545
+http://127.0.0.1:34645
 </pre></div>
                 
                   
