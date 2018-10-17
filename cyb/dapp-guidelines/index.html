@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#contents" tabindex="1" class="md-skip">
+      <a href="#dapp-guidelines" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1273,37 +1273,57 @@
                   <a href="https://github.com/cybercongress/congress/edit/master/wiki/docs/cyb/dapp-guidelines.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h1>
+                <h1 id="dapp-guidelines">DApp guidelines<a class="headerlink" href="#dapp-guidelines" title="Permanent link">&para;</a></h1>
+<p>@asadovka</p>
+<h1 id="1-what-is-dapp">1. What is DApp?<a class="headerlink" href="#1-what-is-dapp" title="Permanent link">&para;</a></h1>
+<p>DApp is a one or multi page application. It can be a simple html file as a frontend and may include smart contract logic as a backend. DApps should be available through IPFS hash.</p>
+<h1 id="2-dapp-structure">2. DApp structure<a class="headerlink" href="#2-dapp-structure" title="Permanent link">&para;</a></h1>
+<p>Cyb CLI can automatically generate structure for your DApp. All you need to do is just type some commands, come up with a name and develop!</p>
+<h1 id="3-dapp-development">3. DApp development<a class="headerlink" href="#3-dapp-development" title="Permanent link">&para;</a></h1>
+<p>Here we describe how to generate initial app structure.</p>
 <ol>
-<li>Dapp structure</li>
-<li>Design &amp; UX</li>
-<li>Development</li>
+<li>
+<p>Install the latest version of CYB package
+npm install -g cyb</p>
+</li>
+<li>
+<p>Select the path where you want to store your app. For example /Desktop/My_apps
+cd username/Desktop/My_apps</p>
+</li>
+<li>
+<p>Enter the name and generate the structure of the app. A folder with all necessary components will be created
+cyb init appname</p>
+</li>
+<li>
+<p>Go to the app folder and link your app with your Cybr
+cyb link</p>
+</li>
+<li>
+<p>Open the Appstore in CYB. You will see your app on «Your app» page</p>
+</li>
 </ol>
-<h1 id="1-principles">1. Principles<a class="headerlink" href="#1-principles" title="Permanent link">&para;</a></h1>
-<p>We adhere to such key principles of cyb behavior, design and development.</p>
-<h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
-<p>Cyb design process follows Web3 design principles.</p>
-<h3 id="21-state-rules">2.1. State rules<a class="headerlink" href="#21-state-rules" title="Permanent link">&para;</a></h3>
+<p>You can also use our Help DApp (cyb://.help/create) for more info. </p>
+<h1 id="4-dapp-deployment">4. DApp deployment<a class="headerlink" href="#4-dapp-deployment" title="Permanent link">&para;</a></h1>
+<p>When you are ready with development of your app you can easely publish it to the DApp Store so every user of Cyb will see it. 
+Open your app, click on "deploy" button and enter IPFS hash of your app. Sign the transaction - your app will be registred in Chaingear. And that is it!</p>
+<h1 id="4-dapp-design">4. DApp design<a class="headerlink" href="#4-dapp-design" title="Permanent link">&para;</a></h1>
+<p>DApp design process follows Web3 design principles.</p>
+<h2 id="state-rules">State rules<a class="headerlink" href="#state-rules" title="Permanent link">&para;</a></h2>
 <p>We use simple colored states for states of transactions or operations:</p>
 <ul>
 <li>mempool/failed - red</li>
 <li>confirmed/reverted - yellow</li>
 <li>finalized/succesful - green</li>
 </ul>
-<h3 id="22-data-visualisation">2.2 Data visualisation<a class="headerlink" href="#22-data-visualisation" title="Permanent link">&para;</a></h3>
+<h2 id="data-visualisation">Data visualisation<a class="headerlink" href="#data-visualisation" title="Permanent link">&para;</a></h2>
 <p>Data should be visualised in a simple and attractive way. No overloaded plots an diagrams, we use animation instead.</p>
-<h3 id="23-blockchain-objects-presenting">2.3 Blockchain objects presenting<a class="headerlink" href="#23-blockchain-objects-presenting" title="Permanent link">&para;</a></h3>
+<h2 id="blockchain-objects-presenting">Blockchain objects presenting<a class="headerlink" href="#blockchain-objects-presenting" title="Permanent link">&para;</a></h2>
 <p>Blockchain data is too complicated and sometimes not obvious for people. Thus we use adaptive tricks to make work process more convenient:</p>
 <ol>
 <li>Logical grouping for objects. Every app page has common groups of data (general, blockchain specific) for inheritance of views and better navigation or data observing.</li>
 <li>Classical accounting terms used for balance and cashflow operations. Blockahains use econimic principles for interaction between subjects thus we can describe such processes in established terms.</li>
 <li>Robohash logo for contracts entities. Contracts can act by themself, have and algorithms, so it's more natural to perceive them like robots instead of pieces of code.</li>
 </ol>
-<h2 id="3-development">3. Development<a class="headerlink" href="#3-development" title="Permanent link">&para;</a></h2>
-<h2 id="31-shell-development">3.1 Shell development<a class="headerlink" href="#31-shell-development" title="Permanent link">&para;</a></h2>
-<h2 id="32-dapps-development">3.2 DApps development<a class="headerlink" href="#32-dapps-development" title="Permanent link">&para;</a></h2>
-<h2 id="33-dapps-deployment">3.3 DApps deployment<a class="headerlink" href="#33-dapps-deployment" title="Permanent link">&para;</a></h2>
-<h2 id="34-dapps-interaction">3.4 DApps interaction<a class="headerlink" href="#34-dapps-interaction" title="Permanent link">&para;</a></h2>
                 
                   
                 
