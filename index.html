@@ -9,48 +9,36 @@
         <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
         <link href="css/reset.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/style22.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
+        <link href="css/animeidcss.css" rel="stylesheet" />
 
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 100) {
-                        $('.scrollup').fadeIn();
-                    } else {
-                        $('.scrollup').fadeOut();
-                    }
-                });
-
-                $('.scrollup').click(function () {
-                    $("html, body").animate({
-                        scrollTop: 0
-                    }, 600);
-                    return false;
-                });
-
-            });
+        <script src="js/wow.main.js"></script>
+        <script>
+            new WOW().init();
         </script>
+        
 
         
     </head>
         
     <body>
         <div class="header">
-            <div class="logo"><img src="img/group-10.png" srcset="img/group-10@2x.png 2x,img/group-10@3x.png 3x"class="Group-10"></div>
+            <div class="logo wow bounceInLeft"><a href="https://github.com/cybercongress"><img src="img/group-10.png" srcset="img/group-10@2x.png 2x,img/group-10@3x.png 3x" alt='image' class="Group-10"></a></div>
             <div class="menu">
                 <div class="illustaration"></div>
-                <div class="name">
+                <div class="name"></div>
+
                 <div class="t1">
-                    <div class="one"><a href="#one" class="one1">Idea & Mission</a></div>
-                    <div class="two"><a href="#two" class="one1">Goals & Values</a></div>
-                    <div class="three"><a href="#three" class="one1">Stack</a></div>
+                    <div class="one wow fadeIn"><a href="#one" class="one1">Idea & Mission</a></div>
+                    <div class="two wow fadeIn" data-wow-delay="0.3s"><a href="#two" class="one1">Goals & Values</a></div>
+                    <div class="three wow fadeIn" data-wow-delay="0.6s"><a href="#three" class="one1">Stack</a></div>
                 </div>
+
                 <div class="t2">
-                    <div class="four"><a href="#four" class="one1">Governance</a></div>
-                    <div class="five"><a href="#five" class="one1">Functions</a></div>
-                    <div class="six"><a href="#six" class="one1">Products</a></div>
+                    <div class="four wow fadeIn" data-wow-delay="0.9s"><a href=" #four" class="one1">Governance</a></div>
+                    <div class="five wow fadeIn" data-wow-delay="1.2s"><a href=" #five" class="one1">Functions</a></div>
+                    <div class="six wow fadeIn" data-wow-delay="1.5s"><a href=" #six" class="one1">Products</a></div>
                 </div>
+
             </div>      
         </div>
         <div class="content">
@@ -111,7 +99,7 @@
                     <h1><span class="sleshcolor">/</span>Values</h1>
                     We believe that our principles should be aligned with our values, thus helping us to achieve our goals:
                     <ul class="disk">
-                        <br>
+                        
                         <li>Security. We do not work with fiat or with bureaucratic paper hassle. We work only, with digital
                             signatures</li>
                         <li>Anonymity and privacy. If someone chooses to stay anonymous or private, it is their right to do so</li>
@@ -137,7 +125,7 @@
                     <h1 id="three"><span class="sleshcolor">/</span>Stack</h1>
                     We are going to advance and deploy, the following technologies, available at the moment:
                     <ul class="disk">
-                        <br>
+                        
                         <li>SAI: digital signatures, neural cryptography, game theory, deep learning, digital DNA;</li>
                         <li>GAI: consensus computers, zero-knowledge proofs, game theory;</li>
                         <li>Prediction markets: decentralized oracles / prediction schemes - such as Augur;</li>
@@ -160,7 +148,7 @@
                     cyber•Congress is founded by the following cryptographic entities using the <a href="https://github.com/cybercongress/congress/blob/master/0x9f4062F6153Ff4Dbf93F6A6F686eD3C906Bf0684"
                         target="_blank" class="textcript">genesis account:</a>
                     <ul class="disk">
-                        <br>
+                      
                         <li>@21xhipster:Keybase ID,Ethereum ID</li>
                         <li>@litvintech:Keybase ID,Ethereum ID</li>
                         <li>@hleb-albau:Keybase ID,Ethereum ID</li>
@@ -310,101 +298,151 @@
                 <p>The current product priority, is the following: </p>
                 <br>
                 <ul class="disk"><li>cyber•Search</li></ul>
-                <br>
-                <p>If one wishes to add something to this list, they must create a proposal with some research <a href="https://github.com/cybercongress/congress/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Proposal%22"target="_blank" class="textcript">here</a></p>
+                <p>If one wishes to add something to this list, they must create a proposal with some research <a href="https://github.com/cybercongress/congress/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Proposal%22" target="_blank" class="textcript">here</a></p>
             </div>
             <div class="group2"></div>
-            <div class="t3">
+
+            <div class="container">
                 <div class="team">
-                    <img src="img/Dima.png"  class="layer">
+                    <img src="img/Dima.png"  class="layer" alt="image"/>
                     <h2>Dima Starodubcev</h2>
                     <p>Architector and visioner.<br>Also cybernomics guru.</p>
                     <div class="pm">
-                        <div><img src="img/github-logo.png" class="imgbatt" /></div>
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
                         <div class="linkteam"><a href="https://github.com/xhipster" class="one1">@xhipster</a></div>
                     </div>
                 </div>
+
                 <div class="team">
                     <img src="img/36516971.png" srcset="img/36516971@2x.png 2x,img/36516971@3x.png 3x" class="layer">
                     <h2>Valery Litvin</h2>
                     <p>Creator and experimenter.<br>Also blockchain husband</p>
                     <div class="pm">
-                        <div><img src="img/github-logo.png" class="imgbatt" /></div>
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
                         <div class="linkteam"><a href="https://github.com/litvintech" class="one1">@litvintech</a></div>
                     </div>
                 </div>
+
                 <div class="team">
-                        <img src="img/36516974.png" srcset="img/36516974@2x.png 2x,img/36516974@3x.png 3x" class="layer">
-                        <h2>Hleb Albau</h2>
-                        <p>Developer and engineer.<br>Also guy who know how it does</p>
+                            <img src="img/36516974.png" srcset="img/36516974@2x.png 2x,img/36516974@3x.png 3x" class="layer" alt="image"/>
+                            <h2>Hleb Albau</h2>
+                            <p>Developer and engineer.<br>Also guy who know how it does</p>
                     <div class="pm">
-                        <div><img src="img/github-logo.png" class="imgbatt" /></div>
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
                         <div class="linkteam"><a href="https://github.com/hleb-albau" class="one1">@hleb-albau</a></div>
                     </div>
                 </div>
-                </div>
-                <div class="t3">   
-                    <div class="team">
-                            <img src="img/36516975.png" srcset="img/36516975@2x.png 2x,img/36516975@3x.png 3x" class="layer">
-                            <h2>Siarhei Sadau</h2>
+
+                <div class="team">
+                        <img src="img/36516975.png" srcset="img/36516975@2x.png 2x,img/36516975@3x.png 3x" class="layer" alt="image">
+                        <h2>Siarhei Sadau</h2>
                         <p>PM and solver.<br>Also guy who count tokens</p>
-                        <div class="pm">
-                            <div><img src="img/github-logo.png" class="imgbatt" /></div>
-                            <div class="linkteam"><a href="https://github.com/asadovka" class="one1">@asadovka</a></div>
-                        </div>
+                    <div class="pm">
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
+                        <div class="linkteam"><a href="https://github.com/asadovka" class="one1">@asadovka</a></div>
                     </div>
-                    <div class="team">
-                            <img src="img/36516976.png" srcset="img/36516976@2x.png 2x,img/36516976@3x.png 3x" class="layer">
-                            <h2>Andrew Luzkovsky</h2>
+                </div>
+
+                <div class="team">
+                        <img src="img/36516976.png" srcset="img/36516976@2x.png 2x,img/36516976@3x.png 3x" class="layer" alt="image">
+                        <h2>Andrew Luzkovsky</h2>
                         <p>JS, frontend and fullstack developer. Also guy who look at blockchain with passion and sadness</p>
-                        <div class="pm2">
-                            <div><img src="img/github-logo.png" class="imgbatt" /></div>
-                            <div class="linkteam"><a href="https://github.com/Pechalka"  class="one1">@pechalka</a></div>
-                        </div>
+                    <div class="pm2">
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
+                        <div class="linkteam"><a href="https://github.com/Pechalka"  class="one1">@pechalka</a></div>
                     </div>
-                    <div class="team">
-                            <img src="img/36516972.png" srcset="img/36516972@2x.png 2x,img/36516972@3x.png 3x" class="layer">
-                            <h2>Valentin Stavetski</h2>
-                            <p>Kotlin and backend developer.<br>Also guy who like Honda tuning</p>
-                        <div class="pm">
-                            <div><img src="img/github-logo.png" class="imgbatt" /></div>
-                            <div class="linkteam"><a href="https://github.com/vstavetski" class="one1">@vstavetski</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="t3">    
-                    <div class="team">
-                            <img src="img/36516977.png" srcset="img/36516977@2x.png 2x,img/36516977@3x.png 3x" class="layer">
-                            <h2>Ales Puchilo</h2>
-                            <p>Community manager.<br>Also guy who like tasks on gitcoin</p>
-                        <div class="pm">
-                            <div><img src="img/github-logo.png" class="imgbatt" /></div>
-                            <div class="linkteam"><a href="https://github.com/SaveTheAles" class="one1">@savetheales</a></div>
-                        </div>
-                    </div>
-                    <div class="team">
-                            <img src="img/36516978.png" srcset="img/36516978@2x.png 2x,img/36516978@3x.png 3x" class="layer">
-                            <h2>Volha Biassonava</h2>
-                            <p>Tech and graph designer.<br>Also girl</p>
-                        <div class="pm">
-                            <div><img src="img/github-logo.png" class="imgbatt" /></div>
-                            <div class="linkteam"><a href="https://github.com/Olga584" class="one1">@olga584</a></div>
-                        </div>                
-                    </div>
-                    <div class="team" >
-                            <img src="img/36516979.png" srcset="img/36516979@2x.png 2x,img/36516979@3x.png 3x" class="layer">
-                            <h2>Artur Albov</h2>
-                            <p>Kotlin and Go backend developer.<br>Also young guy with big ambitions</p>
-                        <div class="pm">
-                            <div><img src="img/github-logo.png" class="imgbatt" /></div>
-                            <div class="linkteam"><a href="https://github.com/arturalbov" class="one1">@arturalbov</a></div>
-                        </div>
-                    </div>    
                 </div>
 
-               
+                <div class="team">
+                        <img src="img/36516972.png" srcset="img/36516972@2x.png 2x,img/36516972@3x.png 3x" class="layer" alt="image">
+                        <h2>Valentin Stavetski</h2>
+                        <p>Kotlin and backend developer.<br>Also guy who like Honda tuning</p>
+                    <div class="pm">
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
+                        <div class="linkteam"><a href="https://github.com/vstavetski" class="one1">@vstavetski</a></div>
+                    </div>
+                </div>
+  
+                <div class="team">
+                        <img src="img/36516977.png" srcset="img/36516977@2x.png 2x,img/36516977@3x.png 3x" class="layer" alt="image">
+                        <h2>Ales Puchilo</h2>
+                        <p>Community manager.<br>Also guy who like tasks on gitcoin</p>
+                    <div class="pm">
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
+                        <div class="linkteam"><a href="https://github.com/SaveTheAles" class="one1">@savetheales</a></div>
+                    </div>
+                </div>
+
+                <div class="team">
+                        <img src="img/36516978.png" srcset="img/36516978@2x.png 2x,img/36516978@3x.png 3x" class="layer" alt="image">
+                        <h2>Volha Biassonava</h2>
+                        <p>Tech and graph designer.<br>Also girl</p>
+                    <div class="pm">
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
+                        <div class="linkteam"><a href="https://github.com/Olga584" class="one1">@olga584</a></div>
+                    </div>                
+                </div>
+
+                <div class="team" >
+                        <img src="img/36516979.png" srcset="img/36516979@2x.png 2x,img/36516979@3x.png 3x" class="layer" alt="image">
+                        <h2>Artur Albov</h2>
+                        <p>Kotlin and Go backend developer.<br>Also young guy with big ambitions</p>
+                    <div class="pm">
+                        <div><img src="img/github-logo.png" class="imgbatt" alt="image"/></div>
+                        <div class="linkteam"><a href="https://github.com/arturalbov" class="one1">@arturalbov</a></div>
+                    </div>
+                </div>    
+                 
             </div>
-
         </div>
+
+        <footer class="footer"></footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('.scrollup').fadeIn();
+                    } else {
+                        $('.scrollup').fadeOut();
+                    }
+                });
+
+                $('.scrollup').click(function () {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 600);
+                    return false;
+                });
+
+            });
+        </script>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                // ссылки
+                $("div").on("click", "a", function (event) {
+                    //отменяем стандартную обработку нажатия по ссылке
+                    event.preventDefault();
+
+                    //забираем идентификатор бока с атрибута href
+                    var id = $(this).attr('href'),
+
+                        //узнаем высоту от начала страницы до блока на который ссылается якорь
+                        top = $(id).offset().top;
+
+                    //анимируем переход на расстояние 
+                    $('body,html').animate({
+                        scrollTop: top
+                    }, 2000);
+                });
+            });
+        </script>
+
+
     </body>
 </html>

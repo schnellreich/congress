@@ -8,61 +8,60 @@
 
 main {
     position: relative;
-   
 }
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
     font-family: "Play";
 }
 
-.header{
+.header {
     width: 100%;
     height: 700px;
 }
-.logo{
+
+.logo {
     display: flex;
-    margin: 68px 102px 0;
+    margin: 68px 5% 0;
 }
 
 .Group-10 {
-  width: 200px;
-  height: 60px;
-  object-fit: contain;
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
 }
 
-.menu{
+.menu {
     width: 900px;
     height: 600px;
     position: absolute;
     right: 0;
     left: 0;
     margin: auto;
-    
 }
-.name{
+
+.name {
     width: 100%;
     height: 100%;
     position: absolute;
-    
 }
-.illustaration{
+
+.illustaration {
     width: 879px;
     height: 600px;
     position: absolute;
     background-image: url("../img/illustaration.svg");
 }
 
-.t1{
+.t1 {
     width: 400px;
     height: 600px;
     position: absolute;
     float: left;
 }
 
-.t2{
+.t2 {
     width: 400px;
     height: 600px;
     position: absolute;
@@ -70,7 +69,6 @@ body {
 }
 
 .one1 {
-
     text-decoration: none;
     color: gray;
 }
@@ -88,12 +86,10 @@ a:hover {
 }
 
 .two {
-   
     position: absolute;
     top: 220px;
     font-family: "Play";
     text-decoration: none;
-
 }
 
 .three {
@@ -128,7 +124,7 @@ a:hover {
     text-decoration: none;
 }
 
-.content{
+.content {
     margin-top: 650px;
     clear: both
 }
@@ -159,7 +155,6 @@ a:hover {
 }
 
 .The-Idea-The-blockch {
-    
     font-family: Play;
     font-size: 16px;
     font-weight: normal;
@@ -175,11 +170,10 @@ a:hover {
 h1 {
     font-size: 20px;
     font-weight: bold;
-
 }
 
 .sleshcolor {
-    color:#5add47;
+    color: #5add47;
     font-size: 32px;
 }
 
@@ -201,7 +195,7 @@ h1 {
     background-color: #EBEBEB;
 }
 
-.group2{
+.group2 {
     width: 134px;
     height: 36px;
     object-fit: contain;
@@ -209,7 +203,7 @@ h1 {
     margin: 10% 20% 0% 20%;
 }
 
-h2{
+h2 {
     font-family: Play;
     font-size: 20px;
     font-weight: bold;
@@ -218,27 +212,24 @@ h2{
     line-height: normal;
     letter-spacing: normal;
     color: #0c2eec;
-    text:center;
-    padding-top:30px;
+    text: center;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.t3{
+.t3 {
     display: flex;
     flex-direction: row;
-    justify-content:center;
-    margin-left: 4%; 
-    margin-top: 0%; 
+    align-content: space-around;
+    justify-content: center;
+    margin-left: 4%;
+    margin-top: 0%;
 }
 
 .team {
-    width: 250px;
-    margin:1% 2%;
-    line-height:20px;
-    margin-bottom: 5%;
-    margin-top: 2%;
+    position: relative;
+    padding-bottom: 50px;
 }
-
 
 .layer {
     width: 120px;
@@ -246,60 +237,86 @@ h2{
     object-fit: contain;
 }
 
-.pm{
-    display:block;
-    width: 150px;
-    display: flex;
-    margin-top: 45px;
+.container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 31% 31% 31%;
+    grid-gap: 50px;
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.pm2{
+.pm {
+    display: block;
+    width: 150px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.pm2 {
     width: 150px;
     display: flex;
     margin-top: 5px;
-    }
+    position: absolute;
+    bottom: 0;
+}
 
-.linkteam{
-    padding-top:2px;
+.linkteam {
+    padding-top: 2px;
     padding-left: 10px;
 }
 
-a{
+a {
     color: #3c00ff;
     text-decoration: none;
 }
 
 .scrollup {
-    width: 40px;
-    height: 40px;
-    opacity: 0.3;
+    width: 56px;
+    height: 56px;
+    opacity: 0.4;
     position: fixed;
     bottom: 50px;
     right: 100px;
     display: none;
     text-indent: -9999px;
-    background: url(../img/icon_top.png) no-repeat;
+    background: url(../img/arrow-up.svg) no-repeat;
 }
 
-@media screen and (max-width:768px){
-    .content{
-        font-size:35px;
+.footer{
+    width: 100%;
+    height: 70px;
+}
+
+@media screen and (max-width:768px) {
+    .content {
+        font-size: 30px;
         float: left;
         margin-left: 13%;
     }
-
-    
-    .The-Idea-The-blockch{
+    .container {
+        display: grid;
+        grid-template-columns: 65% 65%;
+        grid-template-rows: 20% 20% 20% 20%;
+        grid-gap: 60px;
+        margin-top: 50px;
+        margin-left: -1%;
+    }
+    .team {
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .The-Idea-The-blockch {
         width: 760px;
-        font-size:30px;
+        font-size: 30px;
         color: #000000;
         margin: 2% 1%;
     }
-
-    h1{
+    h1 {
         font-size: 40px;
     }
-
     .group {
         width: 379px;
         height: 93px;
@@ -307,52 +324,37 @@ a{
         background-image: url("../img/group.svg");
         margin: 10% 1%;
     }
-
-    .t3 {
-        display:block;
-        flex-direction: row;
-        justify-content: center;
-        margin-left: 1%;
-        margin-top: 10%;
-    }
-
-    .team {
-        width: 600px;
-        height: 600px;
-        margin: 1% 2%;
-        line-height: 45px;
-        margin-bottom: 5%;
-        margin-top: 0%;
-    }
-
     .pm {
         display: block;
-        width: 400px;
+        width: 300px;
         display: flex;
-        margin-top: 1px;
+        position: absolute;
+        bottom: 0;
     }
-
-    h2{
+    .pm2 {
+        width: 150px;
+        display: flex;
+        margin-top: 5px;
+        position: absolute;
+        bottom: 0;
+    }
+    h2 {
         font-size: 40px;
     }
-
-    .imgbatt{
+    .imgbatt {
         width: 35px;
         height: 35px;
         margin-top: 5px;
     }
-
     .name {
         width: 100%;
         height: 100%;
         position: absolute;
     }
-
     .xhipster-litvin {
         width: 100%;
         margin-left: 1%;
     }
-
     .illustaration {
         width: 610px;
         height: 655px;
@@ -360,14 +362,12 @@ a{
         position: absolute;
         margin-left: 15%;
     }
-
     .group2 {
         width: 134px;
         height: 36px;
         object-fit: contain;
         margin-left: 1%;
     }
-
     .t1 {
         width: 25%;
         height: 28%;
@@ -375,7 +375,6 @@ a{
         margin-left: 37%;
         font-size: 30px;
     }
-
     .t2 {
         width: 20%;
         height: 30%;
@@ -383,25 +382,19 @@ a{
         margin-left: 37%;
         font-size: 30px;
     }
-
-
     .one {
         position: absolute;
-        top:0px;
+        top: 0px;
         padding-left: 0px;
         font-family: "Play";
         text-decoration: none;
     }
-
     .two {
-
         position: absolute;
         top: 70px;
         font-family: "Play";
         text-decoration: none;
-
     }
-
     .three {
         position: absolute;
         top: 140px;
@@ -409,7 +402,6 @@ a{
         font-family: "Play";
         text-decoration: none;
     }
-
     .four {
         position: absolute;
         top: 0px;
@@ -417,7 +409,6 @@ a{
         font-family: "Play";
         text-decoration: none;
     }
-
     .five {
         position: absolute;
         top: 70px;
@@ -425,7 +416,6 @@ a{
         font-family: "Play";
         text-decoration: none;
     }
-
     .six {
         position: absolute;
         top: 140px;
@@ -433,26 +423,24 @@ a{
         font-family: "Play";
         text-decoration: none;
     }
-
     .sleshcolor {
         color: #5add47;
         font-size: 50px;
     }
-
     .layer {
-        width: 250px;
-        height: 250px;
+        width: 120px;
+        height: 120px;
         object-fit: contain;
     }
-    
-
-
-
-
+    .scrollup {
+        width: 65px;
+        height: 65px;
+        opacity: 0.3;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        display: none;
+        text-indent: -9999px;
+        background: url(../img/arrow-up.svg) no-repeat;
+    }
 }
-
-
-
-
-
-
